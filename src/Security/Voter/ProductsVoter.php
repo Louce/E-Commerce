@@ -13,7 +13,8 @@ class ProductVoter extends Voter {
     
     private $security;
 
-    public fonction __construct(Security $security) {
+    public function __construct(Security $security)
+    {
         $this->security = $security;
     }
 
