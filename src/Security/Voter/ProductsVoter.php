@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Security\Voter;
+namespace App\Security\Voter\ProductsVoter;
 use App\Entity\Products;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\Voter;
