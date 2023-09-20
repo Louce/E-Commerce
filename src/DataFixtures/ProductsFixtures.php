@@ -17,7 +17,7 @@ class ProductsFixtures extends Fixture
         // use the factory to create a Faker\Generator instance
         $faker = Faker\Factory::create('fr_FR');
 
-        for($prod = 1; $prod <= 10; $prod++){
+        for($prod = 1; $prod <= 50; $prod++){
             $product = new Products();
             $product->setName($faker->text(15));
             $product->setDescription($faker->text());

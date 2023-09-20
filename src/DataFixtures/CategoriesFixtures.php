@@ -38,6 +38,7 @@ class CategoriesFixtures extends Fixture
         $category ->setName($name);
         $category ->setSlug($this->sluggerInterface->slug($category->getName())->lower());
         $category ->setParent($parent);
+        $category ->setCategoryOrder( rand(1, 8));
         $manager ->persist($category);
 
         $this->addReference('cat-'.$this->counter, $category);
