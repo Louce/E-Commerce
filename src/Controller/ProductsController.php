@@ -19,26 +19,4 @@ class ProductsController extends AbstractController {
     
         return $this->render('products/details.html.twig', compact('product'));
     }
-
-    #[Route('/ajouter', name: 'add')]
-    public function add() : Response {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN');
-        return $this->render('admin/products/index.html.twig');
-    }
-
-    #[Route('/modifier/{id}', name: 'edit')]
-    public function edit(Products $product) : Response {
-        //vérifier si l'user peut éditer grâce au Voter (l'attribut + l'objet produit)
-        $this->denyAccessUnlessGranted('PRODUCT_EDIT', $product);
-        return $this->render('admin/products/index.html.twig');
-    }
-
-    #[Route('/supprimer/{id}', name: 'delete')]
-    public function delete(Products $product) : Response {
-        //vérifier si l'user peut supprimer grâce au Voter (l'attribut + l'objet produit)
-        $this->denyAccessUnlessGranted('PRODUCT_DELETE', $product);
-        return $this->render('admin/products/index.html.twig');
-    }
-
-   
 }
