@@ -16,8 +16,8 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 class ProductsController extends AbstractController {
     #[Route('/', name: 'index')]
     public function index(ProductsRepository $productsRepository) : Response {
-        $produits = $productsRepository->findAll();
-        return $this->render('admin/products/index.html.twig', compact('produits'));
+        $products = $productsRepository->findAll();
+        return $this->render('admin/products/index.html.twig', compact('products'));
     }
 
     #[Route('/ajouter', name: 'add')]
